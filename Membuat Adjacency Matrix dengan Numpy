@@ -1,0 +1,28 @@
+import numpy as np
+nodes = ['A', 'B', 'C', 'D']
+A = np.array([
+    [0, 2, 4, 0],
+    [2, 0, 0, 3],
+    [4, 0, 0, 1],
+    [0, 3, 1, 0]
+])
+print(A)
+
+import numpy as np
+M1 = np.array([[1, 2],[3, 4]])
+M2 = np.array([[5, 6],[7, 8]])
+M_tambah = M1 + M2
+print("penjumlahan matriks:", M_tambah)
+M_kurang = M1 - M2
+print("pengurangan matriks:, M_kurang")
+M_kali = np.dot(M1, M2)
+print("perkalian matriks:", M_kali)
+# atau
+M_kali = M1 @ M2
+M_transpose = M1.T
+print("matriks transpose:", M_transpose)
+print(M1[0][1]) # Baris 1 kolom 2
+Z =  np.zeros((3.3))
+print(Z)
+I = np.eye(3)
+print(I)
