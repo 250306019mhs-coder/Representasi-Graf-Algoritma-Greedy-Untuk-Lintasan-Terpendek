@@ -1,0 +1,50 @@
+import numpy as np
+nodes = ['Sembalun','Senaru','Bayan','Sesaot', 'Suranadi']
+Sembalun = np. array([0, 8, 0, 4, 0], 
+              [8, 0, 5, 0, 7], 
+              [0, 5, 0, 0, 0], 
+              [4, 0, 0, 0, 3], 
+              [0, 7, 0, 3, 0]
+]) 
+print("Adjacency matriks") 
+print(Sembalun) 
+node_awal = input("masukkan node awal:")
+tujuan = input("masukkan node tujuan:") 
+
+visited = [0] #mulai dari Sembalun (indeks 0) 
+path ['Sembalun']
+total = 0
+while len (visited) < len (nodes) :
+     curr = visited [-1]
+     min_weight = float ('inf') 
+     next_node = None
+
+     for j in range (len(nodes)) :
+         if Sembalun [curr][j] != 0 and j not in visited and Sembalun [curr][j] < min_weight :
+              min_weight = Sembalun [curr][j]
+              next_node = j
+
+     if next_node  is None:
+         break
+     visited. append(next_node) 
+     path. append(nodes[next_node]) 
+     total += min_weight
+
+     if nodes[next_node] == tujuan
+         break
+optimal_path = ['Sembalun', 'Senaru', 'Bayan']
+optimal_cost = Sembalun[0][1] + Sembalun[1][3]
+
+if total == optimal_cost:
+   kesimpulan = "Greedy menghasilkan solusi optimal
+else:
+   kesimpulan = " Greedy tidak menghasilkan solusi optimal
+
+print("  HASIL GREEDY  ") 
+print("lintasan:", "->".join(path)) 
+print(" jarak total:", total) 
+print ("   PERBANDINGAN  ") 
+print(" lintasan optimal:", "->".join(optimal_path)) 
+print(" jarak total:", optimal_cost
+print("kesimpulan:", kesimpulan) 
+    
