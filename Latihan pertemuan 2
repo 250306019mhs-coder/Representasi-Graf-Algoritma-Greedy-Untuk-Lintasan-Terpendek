@@ -1,0 +1,48 @@
+import numpy as np
+nodes = ['F','G','H','I']
+K = np. array([0, 3, 5, 0], 
+              [3, 0, 0, 4], 
+              [5, 0, 0, 2], 
+              [0, 4, 2, 0]
+]) 
+print (K) 
+node_awal = input("masukkan node awal:")
+tujuan = input("masukkan node tujuan:") 
+
+visited = [0] #mulai dari A (indeks 0) 
+path ['K']
+total = 0
+while len (visited) < len (nodes) :
+     curr = visited [-1]
+     min_weight = float ('inf') 
+     next_node = None
+
+     for j in range (len(nodes)) :
+         if K [curr][j] != 0 and j not in visited and K [curr][j] < min_weight :
+              min_weight = K [curr][j]
+              next_node = j
+
+     if next_node  is None:
+         break
+     visited. append(next_node) 
+     path. append(nodes[next_node]) 
+     total += min_weight
+
+     if nodes[next_node] == tujuan
+         break
+optimal_path = ['G', 'H', 'I']
+optimal_cost = K[0][1] + K[1][3]
+
+if total == optimal_cost:
+   kesimpulan = "Greedy menghasilkan solusi optimal
+else:
+   kesimpulan = " Greedy tidak menghasilkan solusi optimal
+
+print("  HASIL GREEDY  ") 
+print("lintasan:", "->".join(path)) 
+print(" jarak total:", total) 
+print ("   PERBANDINGAN  ") 
+print(" lintasan optimal:", "->".join(optimal_path)) 
+print(" jarak total:", optimal_cost
+print("kesimpulan:", kesimpulan) 
+    
